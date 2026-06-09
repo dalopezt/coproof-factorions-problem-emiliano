@@ -1,4 +1,9 @@
-**Theorem.** The set of all natural numbers $n$ that equal the sum of the factorials of their own decimal digits is exactly $\{1, 2, 145, 40585\}$. That is, defining $S(n) = \sum_{d \in \text{digits}(n)} d!$, we have
-$$\{ n \in \mathbb{N} \mid S(n) = n \} = \{1, 2, 145, 40585\}.$$
+**Theorem.** The set of natural numbers equal to the sum of the factorials of their own digits is exactly $\{1, 2, 145, 40585\}$. That is,
+$$\{\, n \in \mathbb{N} \mid \sigma(n) = n \,\} = \{1,\, 2,\, 145,\, 40585\},$$
+where $\sigma(n)$ denotes the digit-factorial sum of $n$.
 
-*Proof.* Unsolved.
+*Proof.* We show the two set inclusions separately.
+
+$(\subseteq)$ Let $n \in \mathbb{N}$ satisfy $\sigma(n) = n$. By \textbf{Upper Bound}, any fixed point of $\sigma$ must satisfy $n \leq 2{,}540{,}160$: indeed, if $n > 2{,}540{,}160$ then $\sigma(n) < n$, contradicting $\sigma(n) = n$. Hence $n$ belongs to the finite set $\{\, n \in \mathbb{N} \mid \sigma(n) = n \text{ and } n \leq 2{,}540{,}160\,\}$. By \textbf{Finite Search}, this finite set equals $\{1, 2, 145, 40585\}$, so $n \in \{1, 2, 145, 40585\}$.
+
+$(\supseteq)$ For each of $n \in \{1, 2, 145, 40585\}$, membership in $\{\, n \mid \sigma(n) = n \text{ and } n \leq 2{,}540{,}160\,\}$ is confirmed directly by \textbf{Finite Search}, from which $\sigma(n) = n$ follows immediately. $\blacksquare$
